@@ -6,7 +6,18 @@ pipeline {
     stages {
         stage('Initialize') {
             steps {
-            git 'https://github.com/jpuhlman/tree-mirror'
+                    checkout([
+                        $class: 'GitSCM',
+                        branches: [[name: "master"]],
+                        doGenerateSubmoduleConfigurations: false,
+                        extensions: [
+                            [$class: 'RelativeTargetDirectory', relativeTargetDir: "tools"],
+                        ],
+                        submoduleCfg: [],
+                        userRemoteConfigs: [
+                        [url: 'https://github.com/jpuhlman/tree-mirror']
+                        ]
+                    ])
             }
         }
     }
