@@ -20,6 +20,11 @@ pipeline {
                     ])
             }
         }
+        stage('Run update') {
+            steps {
+                sh 'tools/bin/update.sh'
+            }
+        }
     }
 }
 
