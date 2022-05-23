@@ -1,0 +1,2 @@
+TREE=git://gitcgx.mvista.com/cgx/CGX4.0/kernel/linux-mvista-4.0.git
+BRANCH=mvl-5.10/msd.nxp-lf
