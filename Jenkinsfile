@@ -21,7 +21,7 @@ pipeline {
                         ],
                         submoduleCfg: [],
                         userRemoteConfigs: [
-                        [url: 'https://github.com/oomforge/tree-mirror.git']
+                        [url: 'https://github.com/jpuhlman/tree-mirror']
                         ]
                     ])
             }
